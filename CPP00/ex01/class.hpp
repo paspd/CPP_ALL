@@ -26,9 +26,14 @@ public:
 	void	set_nickname(int contact_id, std::string _nickname);
 	void	set_phone_number(int contact_id, std::string _phone_number);
 	void	set_darkest_secret(int contact_id, std::string _darkest_secret);
-	void	set_nb_contact(int nb_contact = 0);
+	void	set_nb_contact(int nb_contact);
+	std::string		get_first_name(int contact_id);
+	std::string		get_last_name(int contact_id);
+	std::string		get_nickname(int contact_id);
+	std::string		get_phone_number(int contact_id);
+	std::string		get_darkest_secret(int contact_id);
 	int		get_nb_contact();
-	phoneBook(/* args */);
+	phoneBook();
 	~phoneBook();
 private:
 	int		nb_contact;

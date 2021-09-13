@@ -26,7 +26,32 @@ void phoneBook::set_darkest_secret(int contact_id, std::string _darkest_secret)
 	this->contact_list[contact_id]._darkest_secret = _darkest_secret;
 }
 
-void phoneBook::set_nb_contact(int nb_contact = 0)
+std::string	phoneBook::get_first_name(int contact_id)
+{
+	return (this->contact_list[contact_id]._first_name);
+}
+
+std::string	phoneBook::get_last_name(int contact_id)
+{
+	return (this->contact_list[contact_id]._last_name);
+}
+
+std::string	phoneBook::get_nickname(int contact_id)
+{
+	return (this->contact_list[contact_id]._nickname);
+}
+
+std::string	phoneBook::get_phone_number(int contact_id)
+{
+	return (this->contact_list[contact_id]._phone_number);
+}
+
+std::string	phoneBook::get_darkest_secret(int contact_id)
+{
+	return (this->contact_list[contact_id]._darkest_secret);
+}
+
+void phoneBook::set_nb_contact(int nb_contact)
 {
 	this->nb_contact = nb_contact;
 }

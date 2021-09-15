@@ -1,13 +1,14 @@
 NAME			=		Phonebook
 
-HEADER			=		class.hpp
+HEADER			=		ClassContact.hpp
 
 CC				=		@clang++
 
 CFLAGS			=		-Wall -Wextra -Werror
 
-SRCS			=		Phonebook.cpp \
-						class.cpp \
+SRCS			=		main.cpp \
+						ClassContact.cpp \
+						ClassPhonebook.cpp
 
 OBJS			=		$(SRCS:.cpp=.o)
 
@@ -16,16 +17,18 @@ all				:		$(NAME)
 
 $(NAME)		: $(OBJS)
 		$(CC) $(CFLAGS) $(OBJS) -I $(HEADER) -o $(NAME)
-		@echo "\033[33m[PhoneBook] \033[34mCompiled\033[0m"
+		@echo "\033[34m[PhoneBook] Compiled\033[0m"
 
 %.o: %.cpp $(HEADER)
 		$(CC) $(CFLAGS) -c $< -o $@ -I $(HEADER)
 
 clean		:
-		@echo "\033[33m[PhoneBook] \033[32mClean\033[0m"
+		@echo "\033[32m[PhoneBook] Clean\033[0m"
 		@rm -f $(OBJS)
 
-fclean		: clean
+fclean		:
+		@echo "\033[32m[PhoneBook] Clean\033[0m"
+		@rm -f $(OBJS)
 		@rm -f $(NAME)
 
 re			:		fclean all

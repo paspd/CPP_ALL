@@ -135,8 +135,8 @@ Account::Account(int initial_deposit)
 
 void	Account::_displayTimestamp( void )
 {
-	time_t now = time(0);
-	tm *ltm = localtime(&now);
+	time_t now = std::time(0);
+	tm *ltm = std::localtime(&now);
 	std::cout << "[" << std::setfill('0') << 1900 + ltm->tm_year << std::setw(2) <<
 	1 + ltm->tm_mon << std::setw(2) << ltm->tm_mday << "_" << std::setw(2) << 
 	ltm->tm_hour << std::setw(2) << ltm->tm_min << std::setw(2) << ltm->tm_sec << "] ";

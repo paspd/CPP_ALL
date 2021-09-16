@@ -1,10 +1,10 @@
-NAME			=		megaphone
+NAME			=		HI_THIS_IS_BRAIN
 
 CC				=		@clang++
 
 CFLAGS			=		-Wall -Wextra -Werror
 
-SRCS			=		megaphone.cpp
+SRCS			=		main.cpp
 
 OBJS			=		$(SRCS:.cpp=.o)
 
@@ -13,16 +13,18 @@ all				:		$(NAME)
 
 $(NAME)		: $(OBJS)
 		$(CC) $(CFLAGS) $(OBJS) -o $(NAME)
-		@echo "\033[33m[Megaphone] \033[34mCompiled\033[0m"
+		@echo "\033[34m[HI THIS IS BRAIN] Compiled\033[0m"
 
 %.o: %.cpp
 		$(CC) $(CFLAGS) -c $< -o $@
 
 clean		:
-		@echo "\033[33m[Megaphone] \033[32mClean\033[0m"
+		@echo "\033[32m[HI THIS IS BRAIN] Clean\033[0m"
 		@rm -f $(OBJS)
 
-fclean		:	clean
+fclean		:
+		@echo "\033[32m[HI THIS IS BRAIN] Clean\033[0m"
+		@rm -f $(OBJS)
 		@rm -f $(NAME)
 
 re			:		fclean all

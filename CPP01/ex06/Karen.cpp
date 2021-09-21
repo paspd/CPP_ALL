@@ -35,9 +35,7 @@ void Karen::complain(std::string level)
 				return ;
 			}
 			default :
-			{
 				i++;
-			}
 		}
 	}
 	

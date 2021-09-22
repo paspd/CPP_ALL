@@ -24,6 +24,7 @@ public:
 	Fixed(Fixed const &rhs);
 	~Fixed();
 };
+
 std::ostream &	operator<<(std::ostream & o, Fixed const & rhs);
 
 #endif

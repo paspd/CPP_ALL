@@ -1,11 +1,11 @@
-#include "ScavTrap.hpp"
+#include "FragTrap.hpp"
 
 int		main(void)
 {
-	ScavTrap Default;
-	ScavTrap Bob("Bob");
-	ScavTrap Bob_copy(Bob);
-	ScavTrap Bob_assignation;
+	FragTrap Default;
+	FragTrap Bob("Bob");
+	FragTrap Bob_copy(Bob);
+	FragTrap Bob_assignation;
 	std::cout << std::endl;
 
 	Bob_assignation = Bob;
@@ -20,10 +20,10 @@ int		main(void)
 	Bob_copy.beRepaired(42);
 	std::cout << std::endl;
 
-	Default.guardGate();
-	Bob.guardGate();
-	Bob_copy.guardGate();
-	Bob_assignation.guardGate();
+	Default.highFivesGuys();
+	Bob.highFivesGuys();
+	Bob_copy.highFivesGuys();
+	Bob_assignation.highFivesGuys();
 	std::cout << std::endl;
 
 	return(0);

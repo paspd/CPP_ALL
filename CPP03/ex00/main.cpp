@@ -2,24 +2,22 @@
 
 int		main(void)
 {
-	ClapTrap A("A");
-	ClapTrap B("B");
-	ClapTrap C(B);
+	ClapTrap Default;
+	ClapTrap Bob("Bob");
+	ClapTrap Bob_copy(Bob);
+	ClapTrap Bob_assignation;
 	std::cout << std::endl;
 
-	A.attack(B.getName());
-	A.takeDamage(6);
-	A.beRepaired(7);
+	Bob_assignation = Bob;
+	std::cout << std::endl;
+	
+	Default.attack("Bob");
+	Bob.attack("Tree");
+	Bob_assignation.attack("Bee");
 	std::cout << std::endl;
 
-	B.attack(A.getName());
-	B.takeDamage(8);
-	B.beRepaired(9);
-	std::cout << std::endl;
-
-	C.attack(A.getName());
-	C.takeDamage(10);
-	C.beRepaired(11);
+	Bob.beRepaired(20);
+	Bob_copy.beRepaired(42);
 	std::cout << std::endl;
 
 	return(0);

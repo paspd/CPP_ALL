@@ -6,11 +6,12 @@
 
 class ClapTrap
 {
-private:
+protected:
 	std::string _name;
 	int _hitPoint;
 	int _energyPoint;
 	int _attackDamage;
+
 public:
 	ClapTrap();
 	ClapTrap(std::string _name);
@@ -32,7 +33,6 @@ public:
 	void setHitPoint(int hitPoint);
 	void setEnergyPoint(int energyPoint);
 	void setAttackDamage(int attackDamage);
-
 };
 
 #endif

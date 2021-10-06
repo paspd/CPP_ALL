@@ -2,18 +2,18 @@
 
 int		main(void)
 {
-	ClapTrap Default;
 	ClapTrap Bob("Bob");
+	ClapTrap Jhon("Jhon");
 	ClapTrap Bob_copy(Bob);
-	ClapTrap Bob_assignation;
 	std::cout << std::endl;
 
-	Bob_assignation = Bob;
+	Bob.attack("Tree");
+	Bob_copy.attack("Tree");
+	Jhon.attack("Bee");
 	std::cout << std::endl;
 	
-	Default.attack("Bob");
-	Bob.attack("Tree");
-	Bob_assignation.attack("Bee");
+	Jhon = Bob_copy;
+	Jhon.attack("Table");
 	std::cout << std::endl;
 
 	Bob.beRepaired(20);

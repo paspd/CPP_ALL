@@ -6,7 +6,6 @@ void ClapTrap::beRepaired(unsigned int amount)
 {
 	std::cout << "ClapTrap " << this->_name << " repaired " << amount << " points of energy!" << std::endl; 
 }
-
 void ClapTrap::takeDamage(unsigned int amount)
 {
 	std::cout << "ClapTrap " << this->_name << " take " << amount << " points of damage!" << std::endl; 
@@ -70,11 +69,6 @@ ClapTrap &ClapTrap::operator=(ClapTrap const &rhs)
 	this->_attackDamage = rhs._attackDamage;
 	std::cout << "ClapTrap asignation opperator called" << std::endl;
 	return (*this);
-}
-
-ClapTrap::ClapTrap(): _name("Default"), _hitPoint(10), _energyPoint(10), _attackDamage(0)
-{
-	std::cout << "ClapTrap default constructor called" << std::endl;
 }
 
 ClapTrap::ClapTrap(std::string _name): _name(_name), _hitPoint(10), _energyPoint(10), _attackDamage(0)

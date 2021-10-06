@@ -1,11 +1,8 @@
 #include "ScavTrap.hpp"
 
-ScavTrap::ScavTrap(): ClapTrap()
+void ScavTrap::attack(std::string const & target)
 {
-	this->_hitPoint = 100;
-	this->_energyPoint = 50;
-	this->_attackDamage = 20;
-	std::cout << "ScavTrap default constructor called" << std::endl;
+	std::cout << "ScavTrap " << this->_name << " attack " << target << ", causing " << this->_attackDamage << " points of damage!" << std::endl; 
 }
 
 ScavTrap::ScavTrap(std::string name): ClapTrap(name)
@@ -16,7 +13,7 @@ ScavTrap::ScavTrap(std::string name): ClapTrap(name)
 	std::cout << "ScavTrap constructor called" << std::endl;
 }
 
-ScavTrap::ScavTrap(ScavTrap const &rhs)
+ScavTrap::ScavTrap(ScavTrap const &rhs): ClapTrap(rhs)
 {
 	this->_name = rhs._name;
 	this->_hitPoint = rhs._hitPoint;

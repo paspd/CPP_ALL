@@ -72,11 +72,6 @@ ClapTrap &ClapTrap::operator=(ClapTrap const &rhs)
 	return (*this);
 }
 
-ClapTrap::ClapTrap(): _name("Default"), _hitPoint(10), _energyPoint(10), _attackDamage(0)
-{
-	std::cout << "ClapTrap default constructor called" << std::endl;
-}
-
 ClapTrap::ClapTrap(std::string _name): _name(_name), _hitPoint(10), _energyPoint(10), _attackDamage(0)
 {
 	std::cout << "ClapTrap constructor called" << std::endl;

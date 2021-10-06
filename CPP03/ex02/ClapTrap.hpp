@@ -13,7 +13,6 @@ protected:
 	int _attackDamage;
 
 public:
-	ClapTrap();
 	ClapTrap(std::string _name);
 	ClapTrap(const ClapTrap& rhs);
 	~ClapTrap();

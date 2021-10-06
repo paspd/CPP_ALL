@@ -1,12 +1,14 @@
-#include "FragTrap.hpp"
+#include "DiamondTrap.hpp"
 
 int		main(void)
 {
-	FragTrap Bob("Bob");
-	FragTrap Jhon("Jhon");
-	FragTrap Bob_copy(Bob);
+	DiamondTrap Default;
+	DiamondTrap Bob("Bob");
+	DiamondTrap Jhon("Jhon");
+	DiamondTrap Bob_copy(Bob);
 	std::cout << std::endl;
 
+	Default.attack("Kittens");
 	Bob.attack("Tree");
 	Bob_copy.attack("Tree");
 	Jhon.attack("Bee");
@@ -25,10 +27,15 @@ int		main(void)
 	Jhon.takeDamage(667);
 	std::cout << std::endl;
 
+	Default.highFivesGuys();
 	Bob.highFivesGuys();
-	Bob_copy.highFivesGuys();
 	Jhon.highFivesGuys();
 	std::cout << std::endl;
 
+	Default.whoAmI();
+	Bob.whoAmI();
+	Bob_copy.whoAmI();
+	Jhon.whoAmI();
+	std::cout << std::endl;
 	return(0);
 }

@@ -4,7 +4,7 @@ HEADER			=		ClapTrap.hpp
 
 CC				=		@clang++
 
-CFLAGS			=		-Wall -Werror -Wextra
+CFLAGS			=		-Wall -Werror -Wextra -Wshadow -Wno-shadow
 
 SRCS			=		main.cpp \
 						ClapTrap.cpp \

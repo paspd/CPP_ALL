@@ -34,6 +34,9 @@ int main()
 
 		Intern intern;
 
+		// Form *fail = intern.makeForm("robotomy requesta", "ok");
+		// std::cout << fail;
+
 		Form *robot = intern.makeForm("robotomy request", "ok");
 		std::cout << *robot;
 	}

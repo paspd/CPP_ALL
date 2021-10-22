@@ -39,6 +39,8 @@ public:
 	int const & getRequiredGradeSign() const;
 	bool const & getSigned() const;
 
+	Form &operator=(Form const & rhs);
+
 	Form(std::string name, int requiredGradeExecute, int requiredGradeSign);
 	Form(Form const & rhs);
 	Form(std::string name);

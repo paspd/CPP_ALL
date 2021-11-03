@@ -1,16 +1,12 @@
-NAME			=		Identify_real_type
+NAME			=		Easy_find
 
-HEADER			=		Base.hpp \
-						A.hpp \
-						B.hpp \
-						C.hpp
+HEADER			=		Easyfind.hpp
 
 CC				=		@clang++
 
 CFLAGS			=		-Wall -Werror -Wextra
 
-SRCS			=		main.cpp \
-						Base.cpp
+SRCS			=		main.cpp
 
 OBJS			=		$(SRCS:.cpp=.o)
 

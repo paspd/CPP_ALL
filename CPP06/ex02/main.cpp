@@ -5,6 +5,7 @@
 
 Base *generate(void)
 {
+	std::srand(std::time(nullptr));
 	int nb = rand() % 3;
 	if (nb == 0)
 		return (new A);

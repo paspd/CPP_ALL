@@ -18,11 +18,10 @@ class NumberNotFound: public std::exception
 template<typename T>
 int const &easyfind(T const &list, int const &nb)
 {
-	typename T::const_iterator ite = list.end();
-	for (typename T::const_iterator it = list.begin(); it != ite; it++)
-		if (*it == nb)
-			return (nb);
-	throw NumberNotFound();
+	if (std::find(list.begin(), list.end(), nb) == list.end())
+		throw NumberNotFound();
+	else
+		return nb;
 }
 
 #endif

@@ -15,7 +15,7 @@ int main()
 	catch(const std::exception& e) {
 		std::cerr << e.what() << '\n';
 	}
-
+	std::cout << std::endl;
 
 	std::vector<int> vector;
 

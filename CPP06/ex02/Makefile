@@ -1,21 +1,27 @@
-NAME			=		 Scalar_conversion
+NAME			=		Identify_real_type
+
+HEADER			=		A.hpp \
+						B.hpp \
+						C.hpp \
+						Base.hpp
 
 CC				=		@clang++
 
-CFLAGS			=		-Wall -Wextra -Werror
+CFLAGS			=		-Wall -Werror -Wextra
 
-SRCS			=		convert.cpp
+SRCS			=		main.cpp \
+						Base.cpp
 
 OBJS			=		$(SRCS:.cpp=.o)
 
 all				:		$(NAME)
 
 
-$(NAME)		: $(OBJS)
+$(NAME)		: $(OBJS) $(HEADER)
 		$(CC) $(CFLAGS) $(OBJS) -o $(NAME)
 		@echo "\033[34m[$(NAME)] Compiled\033[0m"
 
-%.o: %.cpp
+%.o: %.cpp $(HEADER)
 		$(CC) $(CFLAGS) -c $< -o $@
 
 clean		:
@@ -29,4 +35,4 @@ fclean		:
 
 re			:		fclean all
 
-.PHONY: all clean fclean re
+.PHONY: all bonus clean fclean re

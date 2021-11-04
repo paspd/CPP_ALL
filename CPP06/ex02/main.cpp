@@ -15,26 +15,41 @@ Base *generate(void)
 		return (new C);
 }
 
-void identify(Base* p)
-{
-	try {
-		(void)dynamic_cast<A&>(*p);
+void identify(Base& p) {
+	try
+	{
+		(void)dynamic_cast<A&>(p);
 		std::cout << "A" << std::endl;
 	}
-	catch(const std::exception& e) {
+	catch (std::exception &b)
+	{
 	}
-	try {
-		(void)dynamic_cast<B&>(*p);
+	try
+	{
+		(void)dynamic_cast<B&>(p);
 		std::cout << "B" << std::endl;
 	}
-	catch(const std::exception& e) {
+	catch (std::exception &b)
+	{
 	}
-	try {
-		(void)dynamic_cast<C&>(*p);
+	try
+	{
+		(void)dynamic_cast<C&>(p);
 		std::cout << "C" << std::endl;
 	}
-	catch(const std::exception& e) {
+	catch (std::exception& b)
+	{
 	}
+}
+
+void identify(Base* p)
+{
+	if (dynamic_cast<A*>(p) != NULL)
+		std::cout << "A" << std::endl;
+	else if (dynamic_cast<B*>(p))
+		std::cout << "B" << std::endl;
+	else if (dynamic_cast<C*>(p))
+		std::cout << "C" << std::endl;
 }
 
 int main()
